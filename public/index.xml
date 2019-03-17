@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Ryan Faulhaber</title>
+    <link>https://ryanfaulhaber.com/</link>
+    <description>Recent content on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 17 Mar 2019 14:26:03 -0400</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ryanfaulhaber.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://ryanfaulhaber.com/about/</link>
+      <pubDate>Sun, 17 Mar 2019 14:26:03 -0400</pubDate>
+      
+      <guid>https://ryanfaulhaber.com/about/</guid>
+      <description>Welcome to my site.
+I am a full-stack and mobile software developer based in Cleveland, Ohio. My main interests are anything related to JavaScript, Go, and Rust. Additionally, I am AWS certified.
+// TODO link to AWS certification!
+I have experience writing apps using (but not limited to):
+ React / React Native Android AWS (mostly RDS, AppSync, and Lambda)  Additionally, my GitHub is filled with projects written in the languages above.</description>
+    </item>
     
   </channel>
 </rss>
