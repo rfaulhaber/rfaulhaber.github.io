@@ -3,23 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>ryanfaulhaber.com/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2019-03-17T14:26:03-04:00</lastmod>
   </url>
   
   <url>
-    <loc>ryanfaulhaber.com/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>ryanfaulhaber.com/</loc>
+    <loc>/</loc>
     <lastmod>2019-03-17T14:26:03-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>ryanfaulhaber.com/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
