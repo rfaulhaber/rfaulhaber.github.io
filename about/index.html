@@ -45,8 +45,8 @@
   content="Welcome to my site.
 I am a full-stack and mobile software developer based in Cleveland, Ohio. My main interests are anything related to JavaScript, Go, and Rust. Additionally, I am AWS certified.
 I have experience writing apps using (but not limited to):
- React / React Native Android AWS (mostly RDS, AppSync, and Lambda)  Additionally, my GitHub is filled with projects written in the languages above.
-This site is currently a work in progress and was generated using Hugo.|"
+ React / React Native Android AWS (mostly RDS, AppSync, and Lambda)  My GitHub is filled with various projects and experiments.
+This site was generated using Hugo.|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="/about/" />
@@ -75,6 +75,27 @@ This site is currently a work in progress and was generated using Hugo.|"
 />
 
 
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-23680267-3', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -99,7 +120,9 @@ This site is currently a work in progress and was generated using Hugo.|"
     <h1 itemprop="name" id="title">About</h1>
 
     <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-      <p>Welcome to my site.</p>
+      
+
+<p>Welcome to my site.</p>
 
 <p>I am a full-stack and mobile software developer based in Cleveland, Ohio. My
 main interests are anything related to JavaScript, Go, and Rust. Additionally,
@@ -113,11 +136,16 @@ I am <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=2&amp;t=c&a
 <li>AWS (mostly RDS, AppSync, and Lambda)</li>
 </ul>
 
-<p>Additionally, my GitHub is filled with projects written in the languages above.</p>
+<p>My GitHub is filled with various projects and experiments.</p>
 
-<p>This site is currently a work in progress and was generated using <a href="https://gohugo.io">Hugo</a>.</p>
+<p>This site was generated using <a href="https://gohugo.io">Hugo</a>.</p>
 
-<p>Please see my <a href="https://github.com/rfaulhaber">GitHub</a> for more information.</p>
+<h2 id="contact">Contact</h2>
+
+<ul>
+<li><a href="mailto:faulhaberryan@gmail.com">Email</a> (<a href="/gpg1.txt">GPG</a>)</li>
+<li><a href="https://github.com/rfaulhaber">GitHub</a></li>
+</ul>
 
     </article>
   </section>
