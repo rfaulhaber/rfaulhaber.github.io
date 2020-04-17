@@ -1,0 +1,49 @@
+@import 'colors/space.scss';
+@import 'colors/sky.scss';
+@import 'colors/earth.scss';
+@import 'colors/sea.scss';
+@import 'colors/forest.scss';
+
+body {
+	font-family: 'Fira Mono', monospace;
+	text-rendering: geometricPrecision;
+	max-width: 40vw;
+	margin: 0 auto;
+}
+
+pre {
+	border: unset;
+	overflow: hidden;
+}
+
+table {
+	tbody {
+		td:first-child {
+			font-weight: bolder;
+		}
+	}
+
+	tr {
+		th {
+			font-size: 14px;
+		}
+	}
+}
+
+p {
+	margin: 20px 0px;
+}
+
+#tags {
+	li {
+		display: inline-block;
+	}
+}
+
+#date::before {
+	content: '';
+}
+
+div.chroma {
+	background-color: initial;
+}
