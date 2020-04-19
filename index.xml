@@ -17,11 +17,9 @@
       <pubDate>Sun, 17 Mar 2019 14:26:03 -0400</pubDate>
       
       <guid>/about/</guid>
-      <description>Welcome to my site.
-I am a full-stack and mobile software developer based in Cleveland, Ohio. My main interests are anything related to JavaScript, Go, and Rust. Additionally, I am AWS certified.
-I have experience writing apps using (but not limited to):
- React / React Native Android AWS (mostly RDS, AppSync, and Lambda)  My GitHub is filled with various projects and experiments.
-I am currently available for hire for freelancing projects.</description>
+      <description>Hello!
+I&amp;rsquo;m a software developer based in Cleveland, Ohio. I have a wide range of software interests, ranging from plain old JavaScript development to programming language theory.
+I have been writing JavaScript code since 2014 and consider myself to be something of an advocate for the language. Much of my framework-related experience is with React and React Native. I&amp;rsquo;m also currently messing around with Vue and Electron. My first professional work in software development was web application development with JavaScript.</description>
     </item>
     
   </channel>
