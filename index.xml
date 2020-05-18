@@ -17,9 +17,10 @@
       <pubDate>Sun, 17 Mar 2019 14:26:03 -0400</pubDate>
       
       <guid>/about/</guid>
-      <description>Hello!
-I&amp;rsquo;m a software developer based in Cleveland, Ohio. I have a wide range of software interests, ranging from plain old JavaScript development to programming language theory.
-I have been writing JavaScript code since 2014 and consider myself to be something of an advocate for the language. Much of my framework-related experience is with React and React Native. I&amp;rsquo;m also currently messing around with Vue and Electron. My first professional work in software development was web application development with JavaScript.</description>
+      <description>Who? I&amp;rsquo;m a developer living in Cleveland, Ohio. My interests include web development, programming languages, and, increasingly, systems programming.
+Much of my professional work is web development-related. I&amp;rsquo;ve been writing JavaScript since 2014 and I know my way around many big frameworks. Projects outside of work tend to be related to web development or Rust.
+Projects Some fun projects I&amp;rsquo;ve worked on recently:
+ dial, a Lisp interpreter inspired by make a lisp.</description>
     </item>
     
   </channel>

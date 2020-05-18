@@ -20,6 +20,11 @@
 
 		code {
 			color: $uno-3;
+			background: initial;
+		}
+
+		code::before, code::after {
+			content: initial;
 		}
 	}
 
@@ -83,10 +88,24 @@
 	}
 
 	code {
-		color: $uno-3;
+		color: $uno-2;
+		background: $uno-5;
+		padding: 1px;
+		border-radius: 5px;
+	}
+
+	code::before, code::after {
+		content: "`"
 	}
 
 	.post-meta {
 		color: $uno-4;
 	}
+
+	div.highlight pre {
+		background-color: initial;
+		background: initial;
+	}
+
 }
+
