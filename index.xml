@@ -11,5 +11,16 @@
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Working with me</title>
+      <link>/working/</link>
+      <pubDate>Mon, 18 May 2020 15:28:41 -0400</pubDate>
+      
+      <guid>/working/</guid>
+      <description>If you are in need of software development work on a contractual, part time basis (that is, you don&amp;rsquo;t mind me working in the evenings!), please get in touch. I&amp;rsquo;m familiar with a wide variety of languages, frameworks, tools, and platforms. If there&amp;rsquo;s something I don&amp;rsquo;t know, I trust that I can figure it out quickly.
+My experience, as stated partially above, includes:
+ Web development (JavaScript, React) Mobile development (Android with Java and Kotlin, React Native) Development on Amazon Web Services (especially AppSync, DynamoDB, RDS, EC2, ECS)  I am AWS certified.</description>
+    </item>
+    
   </channel>
 </rss>
