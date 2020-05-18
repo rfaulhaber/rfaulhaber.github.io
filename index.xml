@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ryan Faulhaber</title>
+    <title>About on Ryan Faulhaber</title>
     <link>/</link>
-    <description>Recent content on Ryan Faulhaber</description>
+    <description>Recent content in About on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Mar 2019 14:26:03 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Sun, 17 Mar 2019 14:26:03 -0400</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Who? I&amp;rsquo;m a developer living in Cleveland, Ohio. My interests include web development, programming languages, and, increasingly, systems programming.
-Much of my professional work is web development-related. I&amp;rsquo;ve been writing JavaScript since 2014 and I know my way around many big frameworks. Projects outside of work tend to be related to web development or Rust.
-Projects Some fun projects I&amp;rsquo;ve worked on recently:
- dial, a Lisp interpreter inspired by make a lisp.</description>
-    </item>
     
   </channel>
 </rss>
