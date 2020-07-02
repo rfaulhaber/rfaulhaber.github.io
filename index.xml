@@ -6,29 +6,20 @@
     <description>Recent content in About on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Mar 2019 14:26:03 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2020 14:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Guide to Promises in JavaScript</title>
-      <link>/posts/promises/</link>
-      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      <link>/posts/js-promises/</link>
+      <pubDate>Tue, 02 Jun 2020 14:00:00 -0400</pubDate>
       
-      <guid>/posts/promises/</guid>
-      <description>Although the &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;await&lt;/code&gt; keywords are now part of standard JavaScript, under the hood they ultimately use Promises. Here we’ll explore what Promises are, why they’re needed, and how you can “promisify” callbacks in JavaScript.</description>
-    </item>
-    
-    <item>
-      <title>Working with me</title>
-      <link>/working/</link>
-      <pubDate>Mon, 18 May 2020 15:28:41 -0400</pubDate>
-      
-      <guid>/working/</guid>
-      <description>If you are in need of some temporary, part-time freelance work (that is, you don&amp;rsquo;t mind me working in the evenings! I do have a full-time job!), please get in touch. I&amp;rsquo;m familiar with a wide variety of languages, frameworks, tools, and platforms. If there&amp;rsquo;s something I don&amp;rsquo;t know, I trust that I can figure it out quickly.
-My experience, as stated partially above, includes:
- Full-stack web development  Front-end (JavaScript, TypeScript, Vue, React, Angular) Back-end (Go, Rust, Node.</description>
+      <guid>/posts/js-promises/</guid>
+      <description>Although the async and await keywords are now part of standard JavaScript, under the hood they ultimately use Promises. Here we&amp;rsquo;ll explore what Promises are, why they&amp;rsquo;re needed, and how you can &amp;ldquo;promisify&amp;rdquo; callbacks in JavaScript.
+I find a lot of newcomers are often confused by terms like &amp;ldquo;callbacks&amp;rdquo;, &amp;ldquo;Promises&amp;rdquo;, and what exactly async and await do. I hope to clear that up with this article.
+For the sake of clarity, this guide will use function syntax, and not arrow functions.</description>
     </item>
     
     <item>
@@ -38,6 +29,17 @@ My experience, as stated partially above, includes:
       
       <guid>/resume/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Working With Me</title>
+      <link>/working/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/working/</guid>
+      <description>If you are in need of some temporary, part-time freelance work (that is, you don&amp;rsquo;t mind me working in the evenings! I do have a full-time job!), please get in touch. I&amp;rsquo;m familiar with a wide variety of languages, frameworks, tools, and platforms. If there&amp;rsquo;s something I don&amp;rsquo;t know, I trust that I can figure it out quickly.
+My experience, as stated partially above, includes:
+ Full-stack web development  Front-end (JavaScript, TypeScript, Vue, React, Angular) Back-end (Go, Rust, Node.</description>
     </item>
     
   </channel>
