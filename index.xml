@@ -6,10 +6,19 @@
     <description>Recent content in About on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2020 16:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 22:58:00 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ways Emacs Has Changed What I Do</title>
+      <link>/posts/things-emacs-has-changed/</link>
+      <pubDate>Thu, 23 Jul 2020 22:58:00 -0400</pubDate>
+      
+      <guid>/posts/things-emacs-has-changed/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ryanfaulhaber.com/posts/try-emacs/&#34;&gt;Previously&lt;/a&gt; I had written about trying Emacs, but looking back on that post I felt like I was bit vague about the ways in which it&amp;rsquo;s changed the things I do, so I wanted to provide some examples. Emacs has replaced a number of programs in my life, and not all of them are developer related.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>You Should Try Emacs</title>
@@ -17,9 +26,7 @@
       <pubDate>Mon, 13 Jul 2020 16:00:00 -0400</pubDate>
       
       <guid>/posts/try-emacs/</guid>
-      <description>No, really, you should try Emacs. I gave it a shot a few months ago and now I&amp;rsquo;m hooked.
-I know Emacs isn&amp;rsquo;t the most trendy thing these days, in fact it seems that VS Code is the new hotness. But Emacs deserves your attention.
-Let me start by telling you how I arrived at Emacs: some time ago I used IntelliJ for work, almost exclusively. IntelliJ is great, honestly. You can do a lot without having to leave the editor, which I came to realize was something I wanted from an editor.</description>
+      <description>&lt;p&gt;No, really, you should try Emacs.&lt;/p&gt;</description>
     </item>
     
     <item>
