@@ -6,10 +6,28 @@
     <description>Recent content in About on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2020 14:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 22:58:00 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ways Emacs Has Changed What I Do</title>
+      <link>/posts/things-emacs-has-changed/</link>
+      <pubDate>Thu, 23 Jul 2020 22:58:00 -0400</pubDate>
+      
+      <guid>/posts/things-emacs-has-changed/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ryanfaulhaber.com/posts/try-emacs/&#34;&gt;Previously&lt;/a&gt; I had written about trying Emacs, but looking back on that post I felt like I was bit vague about the ways in which it&amp;rsquo;s changed the things I do, so I wanted to provide some examples. Emacs has replaced a number of programs in my life, and not all of them are developer related.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>You Should Try Emacs</title>
+      <link>/posts/try-emacs/</link>
+      <pubDate>Mon, 13 Jul 2020 16:00:00 -0400</pubDate>
+      
+      <guid>/posts/try-emacs/</guid>
+      <description>&lt;p&gt;No, really, you should try Emacs.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>A Guide to Promises in JavaScript</title>
@@ -37,9 +55,9 @@ For the sake of clarity, this guide will use function syntax, and not arrow func
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/working/</guid>
-      <description>If you are in need of some temporary, part-time freelance work (that is, you don&amp;rsquo;t mind me working in the evenings! I do have a full-time job!), please get in touch. I&amp;rsquo;m familiar with a wide variety of languages, frameworks, tools, and platforms. If there&amp;rsquo;s something I don&amp;rsquo;t know, I trust that I can figure it out quickly.
-My experience, as stated partially above, includes:
- Full-stack web development  Front-end (JavaScript, TypeScript, Vue, React, Angular) Back-end (Go, Rust, Node.</description>
+      <description>I am an experienced software developer focusing mostly on full-stack web and mobile development. I am available to work on new projects part-time.
+Over the last few years of my professional life I&amp;rsquo;ve worked in full-stack web and mobile development, and I have a limited amount of systems programming via the Rust programming language. I&amp;rsquo;m experienced with all things JavaScript in particular.
+I am most engaged in my work when I am able to work on complex problems with open-ended solutions.</description>
     </item>
     
   </channel>
