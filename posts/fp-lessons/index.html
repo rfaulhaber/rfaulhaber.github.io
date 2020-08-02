@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="sea-theme">
+    <head>
+	
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23680267-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23680267-3');
+</script>
+
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<base href="/" />
+	<title>Ryan Faulhaber</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/hack@0.8.1/dist/hack.css" />
+	<link rel="stylesheet" href="https://unpkg.com/hack@0.8.1/dist/standard.css" />
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="/css/index.css" />
+
+	<link rel="canonical" href="/posts/fp-lessons/" />
+</head>
+
+    <body>
+        <span class="header-path">
+  
+    <a href="/">/Ryan Faulhaber</a><a href="/posts/">/posts</a><a href="/posts/fp-lessons/">/lessons learned from functional programming</a>
+  
+</span>
+
+    </body>
+</html>
+
+
+<section>
+	<h1>Lessons Learned from Functional Programming</h1>
+	<p>When I went to college the majority of my programming classes were taught with Java. As a result I learned what I like to call &ldquo;classical&rdquo; object-oriented programming. As I started writing more JavaScript I realized I had a lot of issues importing the OO lessons I learned. At some point I read Kyle Simpson&rsquo;s <a href="https://github.com/getify/Functional-Light-JS">Functional-Light JS</a> and my whole world turned upside down. From there I dove into the world of functional programming and internalized many of the lessons I learned. I write JavaScript completely differently now, and I feel as though I&rsquo;m a better programmer for it overall in any language I write. Here are some of the lessons I learned.</p>
+<h2 id="data-should-be-externally-immutable">Data should be externally immutable</h2>
+<p><em>Mutable</em> data generally means data that can be changed. Consider the following JavaScript:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">const</span> x <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>]
+
+console.log(<span style="color:#2aa198">&#39;before:&#39;</span>, x);
+
+x[<span style="color:#2aa198">1</span>] <span style="color:#719e07">=</span> <span style="color:#2aa198">4</span>;
+
+console.log(<span style="color:#2aa198">&#39;after:&#39;</span>, x);
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Here we are <em>mutating</em> the <code>x</code> array by changing the item at <code>1</code>. Many proper functional programming languages do not have a means for letting you do this. Instead, new data is <em>derived</em>. In functional programming, the equivalent code would basically do this:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">const</span> x <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>];
+<span style="color:#268bd2">const</span> y <span style="color:#719e07">=</span> [...x.slice(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">1</span>), <span style="color:#2aa198">4</span>, ...x.slice(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>)];
+
+console.log(<span style="color:#2aa198">&#39;y:&#39;</span>, y);
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>That is, it copies every element except the one we want to change, and return a new array.</p>
+<h3 id="why-is-it-important">Why is it important?</h3>
+<p>In languages that have implicit referencing (e.g. Java, JavaScript), having functions that mutate objects can lead to confusing and hard to trace code. For example:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">function</span> changeFirst(arr) {
+    arr[<span style="color:#2aa198">0</span>] <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;first&#39;</span>;
+}
+
+<span style="color:#268bd2">const</span> x <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>];
+
+changeFirst(x);
+console.log(<span style="color:#2aa198">&#39;x:&#39;</span>, x);
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>If you were working in a large codebase, and you didn&rsquo;t happen to know what <code>changeFirst</code> did, this could lead to potentially confusing code. If <code>changeFirst</code> treated <code>x</code> as immutable, you&rsquo;d know that after <code>x</code> was passed to it you wouldn&rsquo;t have to worry what the value is. This, I think, would be clearer:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">function</span> changeFirst(arr) {
+    <span style="color:#719e07">return</span> [<span style="color:#2aa198">&#39;first&#39;</span>, ...arr.slice(<span style="color:#2aa198">1</span>)];
+}
+
+<span style="color:#268bd2">const</span> x <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>];
+<span style="color:#586e75">// --- don&#39;t have to worry about x after this point ---
+</span><span style="color:#586e75">// (unless we need to derive more data from it of course)
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> newX <span style="color:#719e07">=</span> changeFirst(x);
+console.log(<span style="color:#2aa198">&#39;x&#39;</span>, x);
+console.log(<span style="color:#2aa198">&#39;newX&#39;</span>, newX);
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>And of course by <em>externally</em> mutable I mean that a function should be free to mutate data within itself, but should not mutate a function&rsquo;s arguments or anything in the outside world.</p>
+<h2 id="functions-should-reduce-side-effects">Functions should reduce side effects</h2>
+<p>A <strong>side effect</strong> is when a function modifies some value outside of its current scope. Contrary to popular belief, though, side effects are not in themselves <em>bad</em>, nor are they necessarily <em>hidden</em>. Side effects do tend to create code that&rsquo;s harder to reason about, though.</p>
+<p>Kyle Simpson&rsquo;s <a href="https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch5.md/#chapter-5-reducing-side-effects">chapter on side effects in JavaScript</a> is wonderful, but I&rsquo;ll try to do it justice here.</p>
+<p>Unfortunately, object-oriented languages have side effects baked into their design, and I think that&rsquo;s part of the reason why there&rsquo;s so much literature written around &ldquo;clean code&rdquo; and things like that.</p>
+<p>For example, consider the following Java code:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Foo</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">private</span> <span style="color:#dc322f">int</span> number <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">inc</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        number<span style="color:#719e07">++;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>In this case, a call to <code>Foo</code>'s <code>inc</code> method produces a side effect of modifying an instance of <code>Foo</code>'s state. See what I mean when I say they&rsquo;re baked in?</p>
+<p>Again, though, this isn&rsquo;t to say that they&rsquo;re bad. The problem with this code though is that it&rsquo;s not immediately obvious what&rsquo;s happening to the outside.</p>
+<p>An example in JavaScript would be the following:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">let</span> x <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>;
+
+<span style="color:#268bd2">function</span> doSomething() {
+    x<span style="color:#719e07">++</span>;
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><code>doSomething</code> here modifies <code>x</code>, which is definitely outside of the scope of its function.</p>
+<h3 id="why-is-it-important">Why is it important?</h3>
+<p><a href="https://en.wikipedia.org/wiki/Side%5Feffect%5F(computer%5Fscience)">The Wikipedia article on side effects</a> mentions some interesting concepts: referential transparency and idempotence.</p>
+<p><strong>Referential transparency</strong> is simply when an expression is written in such a way that you could replace the expression itself with its resulting value. Consider the following:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">function</span> add(x, y) {
+    <span style="color:#719e07">return</span> x <span style="color:#719e07">+</span> y;
+}
+
+<span style="color:#268bd2">const</span> number <span style="color:#719e07">=</span> add(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>);
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><code>add</code> is referentially transparent because we could replace its call with the number <code>5</code> and it would make no difference to the behavior of our program.</p>
+<p><strong>Idempotence</strong> is similar. It can be thought of as having a similar definition to &ldquo;deterministic.&rdquo; An idempotent function basically means that you can call the same function more than once with the same arguments and achieve the same results. The best example is REST endpoints, where a lot of REST API callouts are expected to do the same thing. An API call like <code>GET /user?id=123</code> would be expected to return a specific user. You could call that endpoint a hundred times and it would do the same thing.</p>
+<p>I think these two concepts, above all else, help with making code readable and reasonable. If we know our functions have little side effects and always do the same things, we can spend less time worrying how they effect the system.</p>
+<p>In general, reducing side effects requires some discipline, especially in OO languages. I try to stick to writing functions that operate only on their function parameters as much as possible and return a value somehow derived from the arguments. This way I hope to write more predictable and deterministic code.</p>
+<h2 id="classes-aren-t-always-necessary">Classes aren&rsquo;t always necessary</h2>
+<p>This was a hard thing for me to (un-)learn while learning JavaScript (and subsequently newer languages that aren&rsquo;t strictly OO, like Go and Rust).</p>
+<p>One of the problems with learning Java or C# as your first language (Java was mine), I tend to find, is that it forces you to think of problems in terms of object interactions. Java and C# don&rsquo;t give you much option in this regard: your entire application has to be expressed in terms of classes, so you have to use them. This, to me, is the fatal flaw of both languages. Not all problems necessitate classes.</p>
+<p>In languages such as JavaScript where you don&rsquo;t have to express everything in terms of classes, where is the line drawn? For me, it&rsquo;s a question of statefulness. Does the part of my application I&rsquo;m currently working on need to keep track of anything directly? In writing JavaScript, I find that a majority of the time it usually does not.</p>
+<p>In JavaScript, there are mainly two types of classes I create:</p>
+<ol>
+<li>Component classes. If I&rsquo;m writing React, for example, and I find that I need a stateful component, I will declare it as a class. Otherwise it&rsquo;s a function.</li>
+<li>Useful types. I don&rsquo;t create these often but sometimes you find yourself needing to collect data in a way that standard objects don&rsquo;t allow for. If I were writing a parser for example, the parser itself would probably be a class.</li>
+</ol>
+<p>The rest of my code lives in functions.</p>
+<p>In statically typed languages, there&rsquo;s a third type of class I&rsquo;d create: what the programming language Kotlin calls &ldquo;data classes.&rdquo; A data class is just a class that wraps data and has no internal logic to it. It&rsquo;s a class with all public fields that is meant to take advantage of a language&rsquo;s static typing. Such classes tend to be things like REST API requests or responses.</p>
+<h2 id="in-conclusion">In conclusion</h2>
+<p>The above are all lessons I&rsquo;ve learned from not only reading about functional programming but trying to learn functional languages. Functional programming languages are different than what most people are used to, I think, but they also offer a different way of thinking about programs, even if most of the time we can&rsquo;t write programs functionally.</p>
+<p>I don&rsquo;t write purely functional JavaScript, but I&rsquo;ve tried to import the lessons I&rsquo;ve learned from functional programming where possible to make my JavaScript clearer. JavaScript can be confusing as it is and it doesn&rsquo;t need any help in that regard, but I feel that trying to write more functional code as made my JavaScript clearer.</p>
+
+</section>
+
+
+</body>
+
+<footer id="footer">
+	<p id="copyright">
+		
+	</p>
+</footer>
+
+</html>

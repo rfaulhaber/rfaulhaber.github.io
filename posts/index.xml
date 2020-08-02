@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2020 22:58:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 14:41:00 -0400</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lessons Learned from Functional Programming</title>
+      <link>/posts/fp-lessons/</link>
+      <pubDate>Sun, 02 Aug 2020 14:41:00 -0400</pubDate>
+      
+      <guid>/posts/fp-lessons/</guid>
+      <description>Learning about functional programming has changed the way I write and think about code. These are some ideas I&amp;rsquo;ve tried to import back into JavaScript.</description>
+    </item>
     
     <item>
       <title>Ways Emacs Has Changed What I Do</title>
