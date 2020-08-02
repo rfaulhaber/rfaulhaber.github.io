@@ -39,9 +39,14 @@
 </html>
 
 
-<section>
-	<h1>A Guide to Promises in JavaScript</h1>
-	<p>Although the <code>async</code> and <code>await</code> keywords are now part of standard JavaScript, under the hood they ultimately use Promises. Here we&rsquo;ll explore what Promises are, why they&rsquo;re needed, and how you can &ldquo;promisify&rdquo; callbacks in JavaScript.</p>
+<section id="main">
+	<h1 id="title">A Guide to Promises in JavaScript</h1>
+	<div class="post-meta">Tue, Jun 2, 2020 - 12 min </div>
+	
+	</div>
+	<div>
+		<article id="content">
+			<p>Although the <code>async</code> and <code>await</code> keywords are now part of standard JavaScript, under the hood they ultimately use Promises. Here we&rsquo;ll explore what Promises are, why they&rsquo;re needed, and how you can &ldquo;promisify&rdquo; callbacks in JavaScript.</p>
 <p>I find a lot of newcomers are often confused by terms like &ldquo;callbacks&rdquo;, &ldquo;Promises&rdquo;, and what exactly <code>async</code> and <code>await</code> do. I hope to clear that up with this article.</p>
 <p>For the sake of clarity, this guide will use <code>function</code> syntax, and not arrow functions. If you know how to use arrow functions, you can replace much of this code with arrow functions and have it behave similarly. Also, some of these code samples are more verbose than they need to be. Methods like <code>Promise.resolve()</code> can cut down on boilerplate code.</p>
 <h2 id="first-class-functions-in-javascript">First Class Functions in JavaScript</h2>
@@ -599,7 +604,17 @@ doSomething();
 </ol>
 </section>
 
+		</article>
+	</div>
 </section>
+<aside id="meta" style="display: fixed;top:100px;right: 0">
+	<div>
+		
+		
+		<a class="next" href="/posts/try-emacs/"> You Should Try Emacs</a>
+		
+	</div>
+</aside>
 
 
 </body>
