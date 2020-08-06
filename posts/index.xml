@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Aug 2020 14:41:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2020 21:51:00 -0400</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>You Should Try Linux</title>
+      <link>/posts/try-linux/</link>
+      <pubDate>Wed, 05 Aug 2020 21:51:00 -0400</pubDate>
+      
+      <guid>/posts/try-linux/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using Linux since about 2013 and it&amp;rsquo;s been a consistently rewarding experience. Not only am I far more productive on Linux than I am on macOS or Windows, I have the satisfaction of using a system that&amp;rsquo;s uniquely mine.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Lessons Learned from Functional Programming</title>
