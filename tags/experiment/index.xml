@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>emacs on Ryan Faulhaber</title>
-    <link>/tags/emacs/</link>
-    <description>Recent content in emacs on Ryan Faulhaber</description>
+    <title>experiment on Ryan Faulhaber</title>
+    <link>/tags/experiment/</link>
+    <description>Recent content in experiment on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Aug 2020 14:30:00 -0400</lastBuildDate>
     
-	<atom:link href="/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/experiment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,24 +18,6 @@
       
       <guid>/posts/first-emacs-module-rust/</guid>
       <description>&lt;p&gt;Recently I learned that Emacs supports linking with dynamic modules, so I tried writing one in Rust.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Ways Emacs Has Changed What I Do</title>
-      <link>/posts/things-emacs-has-changed/</link>
-      <pubDate>Thu, 23 Jul 2020 22:58:00 -0400</pubDate>
-      
-      <guid>/posts/things-emacs-has-changed/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://ryanfaulhaber.com/posts/try-emacs/&#34;&gt;Previously&lt;/a&gt; I had written about trying Emacs, but looking back on that post I felt like I was bit vague about the ways in which it&amp;rsquo;s changed the things I do, so I wanted to provide some examples. Emacs has replaced a number of programs in my life, and not all of them are developer related.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>You Should Try Emacs</title>
-      <link>/posts/try-emacs/</link>
-      <pubDate>Mon, 13 Jul 2020 16:00:00 -0400</pubDate>
-      
-      <guid>/posts/try-emacs/</guid>
-      <description>&lt;p&gt;No, really, you should try Emacs.&lt;/p&gt;</description>
     </item>
     
     <item>

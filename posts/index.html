@@ -45,6 +45,24 @@
         <article class="post">
     <header>
         <h2>
+            <a href="/posts/first-emacs-module-rust/"> Writing an Emacs module in Rust</a>
+        </h2>
+        <div class="post-meta">Fri, Aug 14, 2020 - 14 min </div>
+    </header>
+	<div class="summary">
+		<p><p>Recently I learned that Emacs supports linking with dynamic modules, so I tried writing one in Rust.</p></p>
+	</div>
+    <footer>
+        <a href="/posts/first-emacs-module-rust/">
+            <nobr>Read more →</nobr>
+        </a>
+    </footer>
+</article>
+
+        
+        <article class="post">
+    <header>
+        <h2>
             <a href="/posts/try-linux/"> You Should Try Linux</a>
         </h2>
         <div class="post-meta">Wed, Aug 5, 2020 - 6 min </div>
@@ -128,6 +146,25 @@ For the sake of clarity, this guide will use function syntax, and not arrow func
 	</div>
     <footer>
         <a href="/posts/js-promises/">
+            <nobr>Read more →</nobr>
+        </a>
+    </footer>
+</article>
+
+        
+        <article class="post">
+    <header>
+        <h2>
+            <a href="/posts/blog/"> Writing the module</a>
+        </h2>
+        <div class="post-meta">Mon, Jan 1, 0001 - 7 min </div>
+    </header>
+	<div class="summary">
+		<p>For the sake of simplicity, we&rsquo;ll write a dead simple module, one that&rsquo;s so simple we could write it in Emacs Lisp:
+1 2 3 4 5 6 7 8 9  (defun my-message-from-rust () &#34;Returns a message from Rust&#34; &#34;Hello Emacs, I&#39;m from Rust&#34;) (defun my-sum (&amp;rest args) &#34;Returns the sum of ARGS&#34; (apply &#39;+ args)) (provide &#39;my-rust-mod)   Our module will provide two functions, my-message-from-rust and my-sum. The former simply returns a string literal, while the latter sums up all the values passed to it.</p>
+	</div>
+    <footer>
+        <a href="/posts/blog/">
             <nobr>Read more →</nobr>
         </a>
     </footer>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Ryan Faulhaber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 21:51:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2020 14:30:00 -0400</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Writing an Emacs module in Rust</title>
+      <link>/posts/first-emacs-module-rust/</link>
+      <pubDate>Fri, 14 Aug 2020 14:30:00 -0400</pubDate>
+      
+      <guid>/posts/first-emacs-module-rust/</guid>
+      <description>&lt;p&gt;Recently I learned that Emacs supports linking with dynamic modules, so I tried writing one in Rust.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>You Should Try Linux</title>
@@ -56,6 +65,16 @@
       <description>Although the async and await keywords are now part of standard JavaScript, under the hood they ultimately use Promises. Here we&amp;rsquo;ll explore what Promises are, why they&amp;rsquo;re needed, and how you can &amp;ldquo;promisify&amp;rdquo; callbacks in JavaScript.
 I find a lot of newcomers are often confused by terms like &amp;ldquo;callbacks&amp;rdquo;, &amp;ldquo;Promises&amp;rdquo;, and what exactly async and await do. I hope to clear that up with this article.
 For the sake of clarity, this guide will use function syntax, and not arrow functions.</description>
+    </item>
+    
+    <item>
+      <title>Writing the module</title>
+      <link>/posts/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/blog/</guid>
+      <description>For the sake of simplicity, we&amp;rsquo;ll write a dead simple module, one that&amp;rsquo;s so simple we could write it in Emacs Lisp:
+1 2 3 4 5 6 7 8 9  (defun my-message-from-rust () &amp;#34;Returns a message from Rust&amp;#34; &amp;#34;Hello Emacs, I&amp;#39;m from Rust&amp;#34;) (defun my-sum (&amp;amp;rest args) &amp;#34;Returns the sum of ARGS&amp;#34; (apply &amp;#39;+ args)) (provide &amp;#39;my-rust-mod)   Our module will provide two functions, my-message-from-rust and my-sum. The former simply returns a string literal, while the latter sums up all the values passed to it.</description>
     </item>
     
   </channel>
