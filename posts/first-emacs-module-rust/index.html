@@ -203,12 +203,12 @@ bindgen = <span style="color:#2aa198">&#34;0.54.1&#34;</span></code></pre></td><
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#586e75">// lib.rs
-</span><span style="color:#586e75">// this is also borrowed from rust-bindgen. C code obviously has different
-</span><span style="color:#586e75">// stylistic conventions. For the sake of simplicity we&#39;ll write stylistically
-</span><span style="color:#586e75">// unconventional code
-</span><span style="color:#586e75"></span><span style="color:#719e07">#![allow(non_upper_case_globals)]</span>
-<span style="color:#719e07">#![allow(non_camel_case_types)]</span>
-<span style="color:#719e07">#![allow(non_snake_case)]</span>
+</span><span style="color:#586e75"></span><span style="color:#586e75">// this is also borrowed from rust-bindgen. C code obviously has different
+</span><span style="color:#586e75"></span><span style="color:#586e75">// stylistic conventions. For the sake of simplicity we&#39;ll write stylistically
+</span><span style="color:#586e75"></span><span style="color:#586e75">// unconventional code
+</span><span style="color:#586e75"></span><span style="color:#719e07">#![</span><span style="color:#719e07">allow(non_upper_case_globals)</span><span style="color:#719e07">]</span>
+<span style="color:#719e07">#![</span><span style="color:#719e07">allow(non_camel_case_types)</span><span style="color:#719e07">]</span>
+<span style="color:#719e07">#![</span><span style="color:#719e07">allow(non_snake_case)</span><span style="color:#719e07">]</span>
 
 <span style="color:#586e75">// this dumps the contents of bindings.rs into this file upon compilation
 </span><span style="color:#586e75"></span>include<span style="color:#719e07">!</span>(concat<span style="color:#719e07">!</span>(env<span style="color:#719e07">!</span>(<span style="color:#2aa198">&#34;OUT_DIR&#34;</span>), <span style="color:#2aa198">&#34;/bindings.rs&#34;</span>));
@@ -248,11 +248,11 @@ bindgen = <span style="color:#2aa198">&#34;0.54.1&#34;</span></code></pre></td><
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my-message-from-rust</span> ()
-  <span style="color:#2aa198">&#34;Returns a message from Rust&#34;</span>
-  <span style="color:#2aa198">&#34;Hello Emacs, I&#39;m from Rust&#34;</span>)
+  <span style="color:#2aa198">&#34;</span><span style="color:#2aa198">Returns a message from Rust</span><span style="color:#2aa198">&#34;</span>
+  <span style="color:#2aa198">&#34;</span><span style="color:#2aa198">Hello Emacs, I&#39;m from Rust</span><span style="color:#2aa198">&#34;</span>)
 
 (<span style="color:#b58900">defun</span> <span style="color:#268bd2">my-sum</span> (<span style="color:#719e07">&amp;rest</span> <span style="color:#268bd2">args</span>)
-  <span style="color:#2aa198">&#34;Returns the sum of ARGS&#34;</span>
+  <span style="color:#2aa198">&#34;</span><span style="color:#2aa198">Returns the sum of ARGS</span><span style="color:#2aa198">&#34;</span>
   (<span style="color:#268bd2">apply</span> <span style="color:#2aa198">&#39;+</span> <span style="color:#268bd2">args</span>))
 
 (<span style="color:#b58900">provide</span> <span style="color:#2aa198">&#39;my-rust-mod</span>)</code></pre></td></tr></table>
@@ -302,28 +302,28 @@ bindgen = <span style="color:#2aa198">&#34;0.54.1&#34;</span></code></pre></td><
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">36
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#719e07">#![allow(non_upper_case_globals)]</span>
-<span style="color:#719e07">#![allow(non_camel_case_types)]</span>
-<span style="color:#719e07">#![allow(non_snake_case)]</span>
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#719e07">#![</span><span style="color:#719e07">allow(non_upper_case_globals)</span><span style="color:#719e07">]</span>
+<span style="color:#719e07">#![</span><span style="color:#719e07">allow(non_camel_case_types)</span><span style="color:#719e07">]</span>
+<span style="color:#719e07">#![</span><span style="color:#719e07">allow(non_snake_case)</span><span style="color:#719e07">]</span>
 
 <span style="color:#586e75">// you shouldn&#39;t have to put this at the top of your file, but I noticed that
-</span><span style="color:#586e75">// rust-analyer got a little confused on my computer when I put it after my code
+</span><span style="color:#586e75"></span><span style="color:#586e75">// rust-analyer got a little confused on my computer when I put it after my code
 </span><span style="color:#586e75"></span>include<span style="color:#719e07">!</span>(concat<span style="color:#719e07">!</span>(env<span style="color:#719e07">!</span>(<span style="color:#2aa198">&#34;OUT_DIR&#34;</span>), <span style="color:#2aa198">&#34;/bindings.rs&#34;</span>));
 
 <span style="color:#586e75">// we&#39;ll be using these later
 </span><span style="color:#586e75"></span><span style="color:#719e07">use</span> std::ffi::CString;
 <span style="color:#719e07">use</span> std::os::raw;
 
-<span style="color:#719e07">#[no_mangle]</span>
-<span style="color:#719e07">#[allow(non_upper_case_globals)]</span>
+<span style="color:#719e07">#[</span><span style="color:#719e07">no_mangle</span><span style="color:#719e07">]</span>
+<span style="color:#719e07">#[</span><span style="color:#719e07">allow(non_upper_case_globals)</span><span style="color:#719e07">]</span>
 <span style="color:#586e75">// Rust doesn&#39;t allow uninitialized static values, and Emacs doesn&#39;t care what
-</span><span style="color:#586e75">// the value of this variable is, as long as it&#39;s there
+</span><span style="color:#586e75"></span><span style="color:#586e75">// the value of this variable is, as long as it&#39;s there
 </span><span style="color:#586e75"></span><span style="color:#719e07">pub</span> <span style="color:#719e07">static</span> plugin_is_GPL_compatible: <span style="color:#268bd2">libc</span>::c_int <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>;
 
 <span style="color:#586e75">// ordinarily the Rust compiler will mangle funciton names. we don&#39;t want to do
-</span><span style="color:#586e75">// that, since the C code won&#39;t know what code to call.
-</span><span style="color:#586e75">// we&#39;ll also want to use `unsafe` because we need access to raw pointers
-</span><span style="color:#586e75"></span><span style="color:#719e07">#[no_mangle]</span>
+</span><span style="color:#586e75"></span><span style="color:#586e75">// that, since the C code won&#39;t know what code to call.
+</span><span style="color:#586e75"></span><span style="color:#586e75">// we&#39;ll also want to use `unsafe` because we need access to raw pointers
+</span><span style="color:#586e75"></span><span style="color:#719e07">#[</span><span style="color:#719e07">no_mangle</span><span style="color:#719e07">]</span>
 <span style="color:#719e07">pub</span> <span style="color:#719e07">unsafe</span> <span style="color:#719e07">extern</span> <span style="color:#2aa198">&#34;C&#34;</span> <span style="color:#719e07">fn</span> <span style="color:#268bd2">emacs_module_init</span>(ert: <span style="color:#719e07">*</span><span style="color:#719e07">mut</span> emacs_runtime) -&gt; <span style="color:#268bd2">libc</span>::c_int {
     <span style="color:#268bd2">let</span> env <span style="color:#719e07">=</span> (<span style="color:#719e07">*</span>ert)
         .get_environment
@@ -575,14 +575,14 @@ bindgen = <span style="color:#2aa198">&#34;0.54.1&#34;</span></code></pre></td><
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#586e75">// intern will return a symbol if it&#39;s already defined.
-</span><span style="color:#586e75">// we&#39;re going to use `fset` to associate our functions to symbols
+</span><span style="color:#586e75"></span><span style="color:#586e75">// we&#39;re going to use `fset` to associate our functions to symbols
 </span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> fset <span style="color:#719e07">=</span> intern(env, CString::new(<span style="color:#2aa198">&#34;fset&#34;</span>).unwrap().as_ptr());
 
 <span style="color:#586e75">// we also want to actually call fset, so we&#39;ll need funcall
 </span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> funcall <span style="color:#719e07">=</span> (<span style="color:#719e07">*</span>env).funcall.expect(<span style="color:#2aa198">&#34;could not get funcall&#34;</span>);
 
 <span style="color:#586e75">// in Emacs Lisp this is like:
-</span><span style="color:#586e75">// (fset &#39;my-message-from-rust (lambda () ...))
+</span><span style="color:#586e75"></span><span style="color:#586e75">// (fset &#39;my-message-from-rust (lambda () ...))
 </span><span style="color:#586e75"></span>funcall(env, fset, <span style="color:#2aa198">2</span>, [my_message_sym, my_message_func].as_mut_ptr());
 funcall(env, fset, <span style="color:#2aa198">2</span>, [my_sum_sym, my_sum_func].as_mut_ptr());
 </code></pre></td></tr></table>

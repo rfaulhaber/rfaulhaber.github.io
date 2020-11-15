@@ -144,7 +144,7 @@ console.log(<span style="color:#2aa198">&#39;x:&#39;</span>, x);
 
 <span style="color:#268bd2">const</span> x <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>];
 <span style="color:#586e75">// --- don&#39;t have to worry about x after this point ---
-</span><span style="color:#586e75">// (unless we need to derive more data from it of course)
+</span><span style="color:#586e75"></span><span style="color:#586e75">// (unless we need to derive more data from it of course)
 </span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> newX <span style="color:#719e07">=</span> changeFirst(x);
 console.log(<span style="color:#2aa198">&#39;x&#39;</span>, x);
 console.log(<span style="color:#2aa198">&#39;newX&#39;</span>, newX);
@@ -171,8 +171,8 @@ console.log(<span style="color:#2aa198">&#39;newX&#39;</span>, newX);
 <pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Foo</span> <span style="color:#719e07">{</span>
     <span style="color:#268bd2">private</span> <span style="color:#dc322f">int</span> number <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
 
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">inc</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-        number<span style="color:#719e07">++;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">inc</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        number<span style="color:#719e07">+</span><span style="color:#719e07">+</span><span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span></code></pre></td></tr></table>
 </div>

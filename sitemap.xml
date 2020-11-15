@@ -4,7 +4,32 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-08-28T22:06:00-04:00</lastmod>
+    <lastmod>2020-11-15T13:19:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/critique-of-modern-ides/</loc>
+    <lastmod>2020-11-15T13:19:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/meta/</loc>
+    <lastmod>2020-11-15T13:19:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-11-15T13:19:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-11-15T13:19:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tooling/</loc>
+    <lastmod>2020-11-15T13:19:00-05:00</lastmod>
   </url>
   
   <url>
@@ -13,22 +38,7 @@
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-08-28T22:06:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/nix-first-impressions/</loc>
-    <lastmod>2020-08-28T22:06:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-08-28T22:06:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tooling/</loc>
     <lastmod>2020-08-28T22:06:00-04:00</lastmod>
   </url>
   

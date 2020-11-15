@@ -138,7 +138,7 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#586e75">// `getDataFromServer` takes a callback and data and passes `data` and
-</span><span style="color:#586e75">// `error` to whatever callback we provide
+</span><span style="color:#586e75"></span><span style="color:#586e75">// `error` to whatever callback we provide
 </span><span style="color:#586e75"></span>getDataFromServer(someInitialData, <span style="color:#268bd2">function</span>(data, error) {
     <span style="color:#719e07">if</span> (data) {
         <span style="color:#586e75">// here we do our second query
@@ -582,18 +582,18 @@ doSomething();
 </span><span style="color:#586e75"></span><span style="color:#268bd2">function</span> foo() {}
 
 <span style="color:#586e75">// named function expression
-</span><span style="color:#586e75">// this is &#34;named&#34; because of &#34;function bar()&#34;,
-</span><span style="color:#586e75">// not because we&#39;re assigning it to a variable named &#34;foo&#34;
-</span><span style="color:#586e75">// doing this is optional and may make reading stack
-</span><span style="color:#586e75">// traces or writing a recursive function easier
+</span><span style="color:#586e75"></span><span style="color:#586e75">// this is &#34;named&#34; because of &#34;function bar()&#34;,
+</span><span style="color:#586e75"></span><span style="color:#586e75">// not because we&#39;re assigning it to a variable named &#34;foo&#34;
+</span><span style="color:#586e75"></span><span style="color:#586e75">// doing this is optional and may make reading stack
+</span><span style="color:#586e75"></span><span style="color:#586e75">// traces or writing a recursive function easier
 </span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> foo <span style="color:#719e07">=</span> <span style="color:#268bd2">function</span> bar() {};
 
 <span style="color:#586e75">// the right hand side of this assignment is an
-</span><span style="color:#586e75">// anonymous function expression
+</span><span style="color:#586e75"></span><span style="color:#586e75">// anonymous function expression
 </span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> foo <span style="color:#719e07">=</span> <span style="color:#268bd2">function</span>() {};
 
 <span style="color:#586e75">// arrow function, nearly equivalent to form above.
-</span><span style="color:#586e75">// arrow functions are always anonymous
+</span><span style="color:#586e75"></span><span style="color:#586e75">// arrow functions are always anonymous
 </span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> foo <span style="color:#719e07">=</span> () =&gt; {};
 </code></pre></td></tr></table>
 </div>
